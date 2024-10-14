@@ -1,6 +1,8 @@
-const add_button = document.querySelector(".add")
-const myLibrary = [];
+const add_button = document.querySelector(".add");
+const submit_button = document.querySelector("#submit")
+const add_info = document.querySelector(".add-info");
 
+const myLibrary = [];
 function book(title, author, num_pages, read) {
     this.title = title;
     this.author = author;
@@ -8,8 +10,12 @@ function book(title, author, num_pages, read) {
     this.read = read;
 }
 
+submit_button.addEventListener("click", () => {
+    add_info.style.display = 'none';
+})
+
 add_button.addEventListener("click", () => {
-    
+    add_info.style.display = 'flex';
 })
 
 
