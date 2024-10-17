@@ -10,21 +10,22 @@
         <div class = "container">
             <div class = "header">Your library</div>
             <div class = "library">
+                <div class = "books"></div>
                 <button class = "add">Add a book</button>
             </div>
             <div class = "add-info">
-                <form action = "" method = post id = "form">
+                <form action = "" method = post id = "form" onsubmit = "return false">
                     <div class = "title">
                         <label for = "title">Title: </label>
-                        <input type = "text" name = "title" required>
+                        <input type = "text" id = "title" name = "title" required>
                     </div>
                     <div class = "author">
                         <label for = "author">Author: </label>
-                        <input type = "text" name = "title" required>
+                        <input type = "text" id = "author" name = "author" required>
                     </div>
                     <div class = "pages">
                         <label for = "pages">How many pages? </label>
-                        <input type = "number" name = "pages">
+                        <input type = "number" id = "pages" name = "pages">
                     </div>
                     <div class = "read">
                         <label for = "read">Have you read the book?</label>

@@ -1,34 +1,64 @@
 const add_button = document.querySelector(".add");
 const submit_button = document.querySelector("#submit")
 const add_info = document.querySelector(".add-info");
+const books = document.querySelector(".books");
+
+
+//function book(title, author, num_pages, read) {
+//    this.title = title;
+//    this.author = author;
+//    this.num_pages = num_pages;
+//    this.read = read;
+//}
 
 const myLibrary = [];
-function book(title, author, num_pages, read) {
-    this.title = title;
-    this.author = author;
-    this.num_pages = num_pages;
-    this.read = read;
+
+
+//in html: onsubmit = "return false" so it doesnt reload the page after submitting//
+//Something to work on, dont let user input no input.//
+function addBookToLibrary() {
+
+    const title = document.getElementById("title");
+    const author = document.getElementById("author");
+    const pages = document.getElementById("pages");
+
+    const titleValue = title.value;
+    const authorValue = author.value;
+    const pagesValue = pages.value;
+    
+    let booksObject = {title: titleValue, author: authorValue, pages: pagesValue};
+
+    myLibrary.push(booksObject);
+    console.log(myLibrary);
+
+    //Solved by taking out loop. problem, on each new book, previous books are being reprinted. //
+    const bookList = document.createElement("div");
+    bookList.classname = "bookList";
+
+    const list = document.createElement("p");
+
+    list.innerText = `${booksObject.title} by ${booksObject.author}. Contains ${booksObject.pages} pages.`
+    bookList.appendChild(list);
+    books.appendChild(bookList);
+    
 }
 
-submit_button.addEventListener("click", () => {
-    add_info.style.display = 'none';
-})
-
-add_button.addEventListener("click", () => {
-    add_info.style.display = 'flex';
-})
+submit_button.addEventListener("mousedown", addBookToLibrary)
 
 
-const the_hobbit = new book("The Hobbit", "J.R.R. Tolkien", "295 pages", "read");
-const great_gatsby = new book("The Great Gatsby", "F. Scott Fitzgerald", "192 pages", "read" );
+//submit_button.addEventListener("mouseup", () => {
+//    add_info.style.display = 'none';
+//})
 
-book.prototype.info = function() {
-     return `The book is called '${this.title}', the author is ${this.author}, it has ${this.num_pages} 
-    and I have ${this.read} the book!`
-}
 
-console.log(the_hobbit.info());
-console.log(great_gatsby.info());
+//myLibrary.push(titleValue);
+ //   console.log(myLibrary);
+    
+
+//add_button.addEventListener("click", () => {
+ //   add_info.style.display = 'flex';
+//})
+
 
 
 
