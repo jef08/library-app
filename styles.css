@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(134, 0, 0);
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -9,19 +13,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
-    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    font-size: 75px;
+    letter-spacing: 2px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
-.add-info {
-    height: 400px;
-    width: 400px;
-    background-color: white;
+.add-info-container {
+    height: 30%;
+    width: 30%;
+    min-width: 400px;
+    min-height: 400px;
+    background-color: rgb(240, 240, 240);
     border-style: solid;
-    border-color: rgb(165, 64, 86);
+    border-color: rgb(134, 0, 0);
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
     top: 25vh;
@@ -29,12 +38,124 @@
     z-index: 10;
 }
 
-.books {
-    background-color: rgb(235, 235, 235);
+.button-div {
     display: flex;
-    flex-direction: column;
-    border-color: aqua;
-    border-style: solid;
-    min-height:100px;
-    border-radius: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    max-height: 50px;
+    width: 90%;
+    padding-top: 15px;
+}
+
+.exit {
+    border-radius: 45%;
+    height: 30px;
+    width: 30px;
+    border: 1px;
+    font-weight: 600;
+    background-color: rgb(214, 214, 214);
+    color: white;
+}
+
+.exit:hover {
+    background-color: darkgray;
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(4px); 
+}
+
+.form-div {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+    font-size: larger;
+    letter-spacing: 1px;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#submit {
+    height: 40px;
+    width: 100px;
+    letter-spacing: 1px;
+    font-size: large;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    min-width: 400px;
+    background-color: rgb(240, 240, 240);
+    padding: 30px;
+    border-spacing: 0;
+    border-radius: 20px;;
+}
+
+th {
+    padding: 20px;
+    font-size: xx-large;
+}
+
+td {
+    text-align: center;
+    padding: 30px;
+    font-size: x-large;
+}
+
+.delete_button {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.delete_button:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+th, td {
+    border-bottom: 1px solid rgb(165, 64, 86);
+}
+
+tr:hover {
+    background-color: rgb(211, 159, 159);
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    padding: 75px;
+}
+
+.add {
+    height: 85px;
+    width: 200px;
+    font-size: x-large;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    font-weight: 600;
+}
+
+.add:hover {
+    cursor: pointer;
+    background-color: darkgray;
 }
