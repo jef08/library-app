@@ -33,9 +33,14 @@ body {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 25vh;
-    left: 25vh;
+    top: 30vh;
+    left: 50vh;
     z-index: 10;
+}
+
+#title, #author, #pages {
+    height: 25px;
+    width: 250px;
 }
 
 .button-div {
@@ -74,7 +79,7 @@ button:active {
     justify-content: center;
     align-items: center;
     line-height: 60px;
-    font-size: larger;
+    font-size: x-large;
     letter-spacing: 1px;
 }
 
@@ -124,11 +129,16 @@ td {
     font-size: 15px;
     letter-spacing: 1px;
     font-weight: 600;
+    border-width: 1px;
+    border-color: darkgray;
+    border-style: solid;
+    color: darkgray;
 }
 
 .delete_button:hover {
-    background-color: darkgray;
+    background-color: rgb(219, 219, 219);
     cursor: pointer;
+    color:black;
 }
 
 th, td {
@@ -153,9 +163,23 @@ tr:hover {
     border-radius: 10px;
     background-color: rgb(240, 240, 240);
     font-weight: 600;
+    border: 1px solid;
 }
 
 .add:hover {
     cursor: pointer;
-    background-color: darkgray;
+    background-color: rgb(206, 206, 206);
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(134, 0, 0);
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
 }

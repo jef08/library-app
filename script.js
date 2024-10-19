@@ -99,6 +99,4 @@ add_button.addEventListener("click", () => {
    add_info.style.display = 'flex';
 })
 
-//checkbox//
-
 
